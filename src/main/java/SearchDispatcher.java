@@ -12,14 +12,12 @@ import java.sql.Statement;
 
 import Util.Constant;
 import Util.DatabaseStuff;
-import Util.Item;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serial;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -48,26 +46,27 @@ public class SearchDispatcher extends HttpServlet {
             throws ServletException, IOException {
     	System.out.println("Searching");
     	String search = request.getParameter("term");
-    	String type = request.getParameter("searchtype");
     	request.getRequestDispatcher("item.jsp").forward(request, response);
-    	ArrayList<Item> results;
-    	if (type.equalsIgnoreCase("name"))
+
+    	if (search == "")
 		{
-			try {
-				results = Util.DatabaseStuff.nameSearch(search);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			request.setAttribute("error", "lnullsearch");
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
-    	else if (type.equalsIgnoreCase("tags"))
+    	else
 		{
-    		try {
-				results = Util.DatabaseStuff.tagSearch(search);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			// check if in database with jdbc
+
+    		String queryString = "select * from items where name=" + Integer.parseInt(search);
+    		try(Connection connect = DriverManager.getConnection(Constant.SQLUrl, Constant.SQLuser, Constant.SQLpass);
+					Statement st = connect.createStatement();) {
+					st.executeUpdate(queryString);
 			}
+			catch (SQLException e)
+			{
+
+			}
+
 		}
     }
 

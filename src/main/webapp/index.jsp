@@ -260,14 +260,14 @@
 						</span>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="searchtype" id="name" value="name" checked>
-						<label class="form-check-label" for="searchtype">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+						<label class="form-check-label" for="exampleRadios1">
 							Name
 						</label>
 					  </div>
 					  <div class="form-check">
-						<input class="form-check-input" type="radio" name="searchtype" id="tags" value="tags">
-						<label class="form-check-label" for="searchtype">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+						<label class="form-check-label" for="exampleRadios2">
 						  Tags
 						</label>
 					  </div>
