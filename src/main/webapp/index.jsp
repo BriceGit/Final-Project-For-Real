@@ -251,26 +251,26 @@
 		<div class="row" id="thumbnails">
 			<div class="col-12 col-md-6">
 				<div class="barSize">
-					<h4 style="text-decoration: underline;">Search</h4>
-					<div class="input-group rounded">
-						<input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-							aria-describedby="search-addon"/>
-						<span class="input-group-text border-0" id="search-addon">
-							<i class="fas fa-search"></i>
-						</span>
-					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-						<label class="form-check-label" for="exampleRadios1">
-							Name
-						</label>
-					  </div>
-					  <div class="form-check">
-						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-						<label class="form-check-label" for="exampleRadios2">
-						  Tags
-						</label>
-					  </div>
+					<form action = "Search" method = "get">
+						<h4 style="text-decoration: underline;">Search</h4>
+						<div class="input-group rounded">
+							<input type="search" name = "term" class="form-control rounded" placeholder="Search" aria-label="Search"
+								aria-describedby="search-addon"/>
+							<input type = "submit">
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="filter" id="exampleRadios1" value="name" checked>
+							<label class="form-check-label" for="exampleRadios1">
+								Name
+							</label>
+						  </div>
+						  <div class="form-check">
+							<input class="form-check-input" type="radio" name="filter" id="exampleRadios2" value="tags">
+							<label class="form-check-label" for="exampleRadios2">
+							  Tags
+							</label>
+						  </div>
+					  </form>
 				</div>
 			</div>
 
