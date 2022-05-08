@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	       
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Questrial', sans-serif;
+}
+.nav-link {
+    transition-duration: 0.3s;
+    font-size: 18px;
+}
+.nav-link:hover {
+    padding-left: 7px;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+}
+body {	
+    background-color: #f4f4f4;
+	font-family: 'Syne', sans-serif;
+}	       
+.shopbtn2{
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    text-decoration: none;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    font-size: 18px;
+}
+.shopbtn2:hover{
+    text-decoration: none;
+    color: black;
+}
+.shopbtn2:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: skyblue;
+    height: 4px;
+    transition-property: right;
+    transition-duration: 0.6s;
+}
+.shopbtn2:hover:before, .shhopbtn2:focus:before, .shopbtn2:active:before {
+    right: 0;
+}
+
+.footer {
+    background-color: slategrey;
+    padding: 20px;
+    position: relative;
+    bottom: 0px;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
+.footerspace {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    padding-left: 60px;
+}
+.productbtn {
+    margin: 10px 50px;
+    color: black;
+    transition: 0.2s ease-in-out;
+}
+.productbtn2 {
+    margin: 10px -45px;
+    color: black;
+    transition: 0.2s ease-in-out;
+}
+
+.discount {
+    text-decoration: line-through;
+}
+ 
+.isa_info, .isa_success, .isa_warning, .isa_error {
+margin: 10px 0px;
+padding:12px;
+ 
+}
+.isa_info {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+.isa_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.isa_warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.isa_error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+.isa_info i, .isa_success i, .isa_warning i, .isa_error i {
+    margin:10px 22px;
+    font-size:2em;
+    vertical-align:middle;
+}
